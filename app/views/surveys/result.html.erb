@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo Survey Result</title>
+</head>
+<body>
+	<% if flash[:success] %>
+		<p><%= flash[:success] %></p>
+	<% end %>
+	<h1>Submitted Information:</h1>
+	<p>Name: <%= @result['name'] %></p>
+	<p>Dojo Location: <%= @result['location'] %></p>
+	<p>Favorite Language: <%= @result['language'] %></p>
+	<p>Comment: <%= @result['comment'] %></p>
+	<a href="/">Go Back</a>
+</body>
+</html>

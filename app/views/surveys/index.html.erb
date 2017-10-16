@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo Survey</title>
+</head>
+<body>
+	<form action="/survey" method="POST">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<label>Your Name:</label>
+		<input type="text" name="survey[name]">
+		<label>Dojo Location:</label>
+		<select name="survey[location]">
+			<option value="Mountain View, CA">Mountain View, CA</option>
+			<option value="Burbank, CA">Burbank, CA</option>
+			<option value="San Jose, CA">San Jose, CA</option>
+			<option value="Seattle, WA">Seattle, WA</option>
+		</select>
+		<label>Favorite Language:</label>
+		<select name="survey[language]">
+			<option value="Python">Python</option>
+			<option value="Ruby">Ruby</option>
+			<option value="Java">Java</option>
+			<option value="HTML">HTML</option>
+		</select>
+		<label>Comment:</label>
+		<textarea name="survey[comment]"></textarea>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
